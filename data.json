@@ -1,0 +1,46 @@
+[ 
+    { 
+       "name":"first step",
+       "type":"banner",
+       "filter":[ 
+          { 
+             "property":"variant_id",
+             "constraint":{ 
+                "operator":"in between",
+                "operands":[ 
+                   2,
+                   4
+                ],
+                "type":"number"
+             }
+          }
+       ]
+    },
+    { 
+       "name":"second step",
+       "type":"first_session",
+       "filter":[ 
+          { 
+             "property":"browser",
+             "constraint":{ 
+                "operator":"equals",
+                "operands":[ 
+                   "Firefox"
+                ],
+                "type":"string"
+             }
+          },
+          { 
+             "property":"city",
+             "constraint":{ 
+                "operator":"does not equal",
+                "operands":[ 
+                   "Bratislava"
+                ],
+                "type":"string"
+             }
+          }
+       ]
+    }
+ ]
+ 
